@@ -10,7 +10,7 @@ publicamente para tomar decisões mais inteligentes.
 
 - Fazer um *web scraping* da tabela de dados do [Portal da Transparência do Governo Federal](https://www.transparencia.gov.br/despesas/orgao?ordenarPor=orgaoSuperior&direcao=asc)
 - armazenar num banco de dados relacional
-- fornecer um endpoint que retorne um json com os dados coletados:
+- fornecer um endpoint (/api/dados) que retorne um json com os dados coletados:
     - Estrutura do retorno da API:
         - mes_ano
         - programa_orcamentario
