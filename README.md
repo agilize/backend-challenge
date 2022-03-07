@@ -32,7 +32,7 @@ A tabela de dados para o scraping fica em (ver print abaixo):
 
 - Preferencialmente utilize PHP, mas esteja livre para usar qualquer linguagem
 - Sugerimos usar docker para facilitar o desenvolvimento e a avaliação do resultado
-- Faça um README explicando o que foi feito, como forma de documentação.
+- Faça um segundo README com o nome PROJETO.md explicando o que foi feito, como forma de documentação.
 
 ## Como você deve nos enviar sua solução?
 
