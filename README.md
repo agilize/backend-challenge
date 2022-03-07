@@ -35,7 +35,7 @@ A tabela de dados para o scraping fica em (ver print abaixo):
 - Faça um segundo README com o nome PROJETO.md explicando o que foi feito, como forma de documentação.
 - Diferenciais:
   - Boa documentação
-  - Testes unitários
+  - Testes unitários modulares
 
 ## Como você deve nos enviar sua solução?
 
