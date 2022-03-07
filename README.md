@@ -37,4 +37,4 @@ A tabela de dados para o scraping fica em (ver print abaixo):
 ## Como você deve nos enviar sua solução?
 
 Faça um clone desde projeto, crie uma branch com seu nome-sobrenome e ao finalizar abra um pull-request para um avaliador da agilize
-e envie um e-mail para [dev@agilize.com.br](mailto:dev@agilize.com.br) com o assunto: **[DESAFIO AGZ] + Finalizado + (nome-da-branch)**
+e envie um e-mail para [dev@agilize.com.br](mailto:dev@agilize.com.br) com o assunto: **[DESAFIO BACKEND AGZ] + Finalizado + (nome-da-branch)**
