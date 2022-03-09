@@ -41,3 +41,12 @@ A tabela de dados para o scraping fica em (ver print abaixo):
 
 Faça um clone deste projeto, crie uma branch com seu **nome-sobrenome** e ao finalizar abra um pull-request para que um avaliador da agilize possa visualizar
 e envie um e-mail para [dev@agilize.com.br](mailto:dev@agilize.com.br) com o assunto: **[DESAFIO BACKEND AGZ] + Finalizado + (nome-da-branch)**
+
+
+## Como abrir um pull request
+- Passo 1: Fazer um fork do projeto
+- Passo 2: Clonar seu fork para o seu computador
+- Passo 3: Fazer o projeto em sua branch
+- Passo 4: Abrir o pull request
+
+Para mais detalhes esse [link](https://www.webdevdrops.com/como-criar-um-pull-request-no-github-passo-a-passo/) tem uma explicação bastante completa
