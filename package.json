@@ -1,0 +1,29 @@
+{
+  "name": "backend-challenge",
+  "version": "1.0.0",
+  "description": "O web scraping (raspagem de rede, em tradução livre), também conhecido como extração de dados da web,\r é o nome dado ao processo de coleta de dados estruturados da web de maneira automatizada. Em geral,\r esse método é usado por pessoas, empresas que desejam usar a vasta quantidade de dados da web disponíveis\r publicamente para tomar decisões mais inteligentes.",
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "knex": "^1.0.3",
+    "nodemon": "^2.0.15",
+    "pg": "^8.7.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Debora1Allen/backend-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Debora1Allen/backend-challenge/issues"
+  },
+  "homepage": "https://github.com/Debora1Allen/backend-challenge#readme"
+}
