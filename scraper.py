@@ -1,5 +1,3 @@
-from lib2to3.pgen2 import driver
-import requests
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -7,7 +5,8 @@ from time import sleep
 from selenium.webdriver.edge.options import Options
 import pandas as pd
 from selenium.webdriver.support.ui import Select
-import undetected_chromedriver as uc
+from sqlalchemy import create_engine
+
 
 options = Options()
 options.add_argument('--headless')
@@ -49,6 +48,8 @@ for row in rows:
     data_info.append([month_year, superior_agency, linked_entity,
                      value_mortgage, value_settled])
 
+engine = create_engine('sqlite:///GovernmentExpenses.db', echo=False)
+
 query_data = pd.DataFrame(data_info, columns=[
     'Mes/Ano', 'Orgão Superior', 'Entitade Vinculada', 'Valor Empenhado', 'Valor Liquidado'])
-print(query_data)
+query_data.to_sql('expenses', con=engine, if_exists='replace')
