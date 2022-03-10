@@ -1,34 +1,10 @@
-const puppeteer = require('puppeteer');
+const express = require('express');
 
-async function teste() {
-  const browser = await puppeteer.launch({ headless: false });
-  const page = await browser.newPage();
-  await page.goto(
-    'https://www.transparencia.gov.br/despesas/orgao?ordenarPor=orgaoSuperior&direcao=asc'
-  );
+const app = express();
+const PORT = process.env.PORT || 3000;
 
-  const infosFromTable = await page.evaluate(() => {
-    const tds = Array.from(document.querySelectorAll('#lista tr td'));
-    return tds.map((td) => td.innerText);
-  });
+app.use(express.json());
 
-  await browser.close();
-  return infosFromTable;
-};
+app.use(errorHandler);
 
-teste().then((result) => {
-  const arraysOfInfos = result
-    .filter((value) => value !== 'Detalhar')
-    .reduce((resultArray, item, index) => {
-      const breakOfArray = Math.floor(index / 7);
-
-      if (!resultArray[breakOfArray]) {
-        resultArray[breakOfArray] = []
-      }
-
-      resultArray[breakOfArray].push(item);
-
-      return resultArray;
-    }, [])
-  console.log(arraysOfInfos);
-});
+app.listen(PORT, () => console.log(`App running on port ${PORT}!`));
