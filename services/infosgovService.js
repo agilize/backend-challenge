@@ -51,9 +51,14 @@ const createInfosGov = async () => {
 };
 
 const getInfosGov = async () => {
+  await createInfosGov();
   const infosFromGov = await InfosGov.findAll();
 
   if (!infosFromGov) throw errorHandling(notFound, 'Infos not found');
 
   return infosFromGov;
+};
+
+module.exports = {
+  getInfosGov,
 };
