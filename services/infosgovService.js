@@ -2,7 +2,7 @@ const { InfosGov } = require('../models');
 const errorHandling = require('../utils/errorHandling');
 
 const puppeteer = require('puppeteer');
-const { badRequest, notFound } = require('../utils/dictionary');
+const { badRequest } = require('../utils/dictionary');
 
 const scrapping = async () => {
   const browser = await puppeteer.launch({ headless: true });
