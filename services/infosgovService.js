@@ -1,11 +1,11 @@
-const { InfosGov } = require('../database/models');
+const { InfosGov } = require('../models');
 const errorHandling = require('../utils/errorHandling');
 
 const puppeteer = require('puppeteer');
 const { badRequest, notFound } = require('../utils/dictionary');
 
 const scrapping = async () => {
-  const browser = await puppeteer.launch({ headless: false });
+  const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
   await page.goto(
     'https://www.transparencia.gov.br/despesas/orgao?ordenarPor=orgaoSuperior&direcao=asc'
@@ -23,8 +23,8 @@ const scrapping = async () => {
 const createInfosGov = async () => {
   const resultOfScrapping = await scrapping();
 
-  if (!resultOfScrapping || resultOfScrapping.length === 0) {
-    throw errorHandling(badRequest, 'Something went wrong');
+  if (resultOfScrapping === undefined || resultOfScrapping.length === 0) {
+    throw errorHandling(badRequest, 'Scrapping failed. Please try again.');
   }
 
   const arraysOfInfos = resultOfScrapping
@@ -41,20 +41,22 @@ const createInfosGov = async () => {
       return resultArray;
     }, []);
   
-  arraysOfInfos.map(array => {
-    const [mesAno, programaOrcamentario, acaoOrcamentaria, valorEmpenhado, valorLiquidado, valorRestosAPagarPagos] = array;
+  arraysOfInfos.map(async (array) => {
+    const [mesAno, programaOrcamentario, acaoOrcamentaria, valorEmpenhado, valorLiquidado, valorPago, valorRestosAPagarPagos] = array;
     await InfosGov.create({
-      mesAno, programaOrcamentario, acaoOrcamentaria, valorEmpenhado, valorLiquidado, valorRestosAPagarPagos
+      mesAno, programaOrcamentario, acaoOrcamentaria, valorEmpenhado, valorLiquidado, valorPago, valorRestosAPagarPagos
     });
   }); 
 
 };
 
 const getInfosGov = async () => {
-  await createInfosGov();
   const infosFromGov = await InfosGov.findAll();
 
-  if (!infosFromGov) throw errorHandling(notFound, 'Infos not found');
+  if (infosFromGov.length === 0) {
+    await createInfosGov();
+    return 'Database filled. Request again to see the infos.';
+  }
 
   return infosFromGov;
 };
