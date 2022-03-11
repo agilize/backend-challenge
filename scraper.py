@@ -44,12 +44,15 @@ for row in rows:
     linked_entity = row_info[2]
     value_mortgage = row_info[3]
     value_settled = row_info[4]
+    amount_paid = row_info[5]
+    amount_to_pay = row_info[6]
 
     data_info.append([month_year, superior_agency, linked_entity,
-                     value_mortgage, value_settled])
+                     value_mortgage, value_settled, amount_paid, amount_to_pay])
 
-engine = create_engine('sqlite:///GovernmentExpenses.db', echo=False)
+engine = create_engine('sqlite:///government_despenses.db', echo=False)
 
 query_data = pd.DataFrame(data_info, columns=[
-    'Mes/Ano', 'Orgão Superior', 'Entitade Vinculada', 'Valor Empenhado', 'Valor Liquidado'])
+    'mes_ano', 'programa_orcamentario', 'acao_orcamentaria', 'valor_empenhado', 'valor_liquidado', 'valor_pago', 'valor_restos_a_pagar_pagos'])
 query_data.to_sql('expenses', con=engine, if_exists='replace')
+print('Banco de dados criado com sucesso')
