@@ -13,6 +13,4 @@
 |
 */
 
-$router->get('/api/dados', function () use ($router) {
-    return $router->app->version();
-});
+$router->get('/api/dados', 'ExpensesController@index');
