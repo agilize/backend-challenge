@@ -50,7 +50,7 @@ for row in rows:
     data_info.append([month_year, superior_agency, linked_entity,
                      value_mortgage, value_settled, amount_paid, amount_to_pay])
 
-engine = create_engine('sqlite:///government_despenses.db', echo=False)
+engine = create_engine('sqlite:///government_expenses.db', echo=False)
 
 query_data = pd.DataFrame(data_info, columns=[
     'mes_ano', 'programa_orcamentario', 'acao_orcamentaria', 'valor_empenhado', 'valor_liquidado', 'valor_pago', 'valor_restos_a_pagar_pagos'])
