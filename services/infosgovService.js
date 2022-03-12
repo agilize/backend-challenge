@@ -11,6 +11,8 @@ const scrapping = async () => {
     'https://www.transparencia.gov.br/despesas/orgao?ordenarPor=orgaoSuperior&direcao=asc'
   );
 
+  // link que me ajudou na lógica de pegar infos da tabela e juntar em um array
+  // https://stackoverflow.com/questions/49236981/want-to-scrape-table-using-puppeteer-how-can-i-get-all-rows-iterate-through-ro
   const infosFromTable = await page.evaluate(() => {
     const tds = Array.from(document.querySelectorAll('#lista tr td'));
     return tds.map((td) => td.innerText);
@@ -27,6 +29,8 @@ const createInfosGov = async () => {
     throw errorHandling(badRequest, 'Scrapping failed. Please try again.');
   }
 
+  // link que me ajudou na lógica de cortar o array em arrays menores
+  // https://stackoverflow.com/questions/8495687/split-array-into-chunks
   const arraysOfInfos = resultOfScrapping
     .filter((value) => value !== 'Detalhar')
     .reduce((resultArray, item, index) => {
