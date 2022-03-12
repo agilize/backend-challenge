@@ -2,15 +2,14 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from time import sleep
-from selenium.webdriver.edge.options import Options
+from selenium.webdriver.firefox.options import Options
 import pandas as pd
 from selenium.webdriver.support.ui import Select
 from sqlalchemy import create_engine
 
-
 options = Options()
 options.add_argument('--headless')
-browser = webdriver.Edge(options=options)
+browser = webdriver.Firefox(options=options)
 
 print('--------Carregando a página')
 browser.get(
@@ -19,7 +18,7 @@ sleep(5)
 
 browser.execute_script(
     """document.getElementsByName('lista_length')[0].innerHTML='<OPTION value="1">1 resultado</OPTION><OPTION value="999999999">Todos os resultados</OPTION>';""")
-print('--------Executando o script para alterar a option')
+print('--------Executando o script para alterar a option e mostrar todos os resultados da tabela')
 select = Select(browser.find_element(By.NAME, 'lista_length'))
 select.select_by_visible_text('Todos os resultados')
 sleep(15)
@@ -55,4 +54,4 @@ engine = create_engine('sqlite:///government_expenses.db', echo=False)
 query_data = pd.DataFrame(data_info, columns=[
     'mes_ano', 'programa_orcamentario', 'acao_orcamentaria', 'valor_empenhado', 'valor_liquidado', 'valor_pago', 'valor_restos_a_pagar_pagos'])
 query_data.to_sql('expenses', con=engine, if_exists='replace')
-print('Banco de dados criado com sucesso')
+print('--------Banco de dados criado com sucesso')

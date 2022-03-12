@@ -14,3 +14,7 @@
 */
 
 $router->get('/api/dados', 'ExpensesController@index');
+
+$router->get('/', function() {
+  return 'Servidor rodando';
+});
