@@ -1,5 +1,10 @@
 const express = require("express");
 const puppeteer = require("puppeteer");
+const knex = require("./bancodedados/conexao");
+const fs = require('fs');
+const { data } = require("cheerio/lib/api/attributes");
+
+
 
 const url = "https://www.transparencia.gov.br/despesas/orgao?ordenarPor=orgaoSuperior&direcao=asc";
 const searchFor = "";
@@ -21,17 +26,17 @@ const searchFor = "";
             const valorPa = row.querySelectorAll('td:nth-child(7)');
             const valorRe = row.querySelectorAll('td:nth-child(8)');
 
-          let mesano = Array.from(mes, column => column.innerText).toString().trim();
+          let mes_ano = Array.from(mes, column => column.innerText).toString().trim();
           let programa_orcamentario = Array.from(programaOr, column => column.innerText).toString().trim();
           let acao_orcamentaria = Array.from(acaoOR, column => column.innerText).toString().trim();
-          let valor_empenhado = Array.from(valorEm, column => column.innerText).toString().trim();
+          let valor_empenhado = Array.from(valorEm, column => column.innerText).toString().trim();;
           let valor_liquidado = Array.from(valorLi, column => column.innerText).toString().trim();
           let valor_pago = Array.from(valorPa, column => column.innerText).toString().trim();
           let valor_restos_a_pagar_pagos = Array.from(valorRe, column => column.innerText).toString().trim();
 
           const obj = {
-              mesano, 
-              programa_orcamentario, 
+              mes_ano, 
+              programa_orcamentario,
               acao_orcamentaria, 
               valor_empenhado, 
               valor_liquidado, 
@@ -42,13 +47,24 @@ const searchFor = "";
           return obj
 
             
-        });
+        })
     });
 
 
+  
+  
+    try {
+      knex.insert(result).into('despesas').then(data => {
+        console.log(data);
+      })
+    }
+    catch (error) {
+      console.log("erro")
+    }
+console.log(result)
 
-    console.log(result)
     await page.waitForTimeout(3000);
 
     await browser.close();
 })();
+
