@@ -37,7 +37,7 @@ return [
 
         'sqlite' => [
             'driver' => 'sqlite',
-            'database' => env('DB_DATABASE', database_path('government_expenses.db')),
+            'database' => env('DB_DATABASE', database_path('../../government_expenses.db')),
             'prefix' => env('DB_PREFIX', ''),
         ],
 

@@ -187,3 +187,4 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 DevTools listening on ws://localhost:50879/devtools/browser/1753f20d-3f84-4721-93b7-58e34d272c37
 1647284776386	Marionette	INFO	Listening on port 50884
 1647284776797	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
