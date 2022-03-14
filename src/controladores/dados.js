@@ -1,4 +1,15 @@
 const knex = require('../conexao');
+const axios = require("axios");
+const cheerio = require("cheerio");
+
+const url = "https://www.transparencia.gov.br/despesas/orgao?ordenarPor=orgaoSuperior&direcao=asc";
+
+async function getDados() {
+    const { data } = await axios.get(url);
+    const $ = cheerio.load(data);
+    const list = [];
+}
+
 
 const listarDados = async (req, res) => {
     try {
