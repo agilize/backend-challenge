@@ -29,7 +29,9 @@ def scrape(url):
       
         table.append(new_item)
 
+    print(table)
     return table
 
-print(scrape(url))
+scrape(url)
+
     
