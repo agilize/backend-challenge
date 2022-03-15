@@ -188,3 +188,107 @@ DevTools listening on ws://localhost:50879/devtools/browser/1753f20d-3f84-4721-9
 1647284776386	Marionette	INFO	Listening on port 50884
 1647284776797	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
 JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1647285793060	geckodriver	INFO	Listening on 127.0.0.1:49948
+1647285796381	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "49949" "-no-remote" "-profile" "C:\\Users\\Isaac\\AppData\\Local\\Temp\\rust_mozprofile64PmfU"
+*** You are running in headless mode.
+1647285797213	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Isaac\\AppData\\Local\\Temp\\rust_mozprofile64PmfU\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49949/devtools/browser/27c5d10c-a12d-4706-aaf7-154803971da6
+1647285802103	Marionette	INFO	Listening on port 49954
+1647285802314	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1647285876904	geckodriver	INFO	Listening on 127.0.0.1:50174
+1647285879883	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "50175" "-no-remote" "-profile" "C:\\Users\\Isaac\\AppData\\Local\\Temp\\rust_mozprofilecMoboq"
+*** You are running in headless mode.
+1647285881605	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Isaac\\AppData\\Local\\Temp\\rust_mozprofilecMoboq\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50175/devtools/browser/d4a77b89-658a-4f65-b592-7c7f5afa3c85
+1647285887947	Marionette	INFO	Listening on port 50180
+1647285888107	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1647285936822	geckodriver	INFO	Listening on 127.0.0.1:50242
+1647285940202	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "50243" "-no-remote" "-profile" "C:\\Users\\Isaac\\AppData\\Local\\Temp\\rust_mozprofileEL3dEk"
+*** You are running in headless mode.
+1647285941558	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Isaac\\AppData\\Local\\Temp\\rust_mozprofileEL3dEk\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50243/devtools/browser/4135c48a-d62e-4af1-9caf-48f21d7919d8
+1647285947851	Marionette	INFO	Listening on port 50249
+1647285947989	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.transparencia.gov.br/despesas/orgao?ordenarPor=orgaoSuperior&direcao=asc, line 601: ReferenceError: $ is not defined
+JavaScript error: https://www.transparencia.gov.br/static/libs/jquery-validation/jquery.validate.min.js?v=3.6.0, line 4: ReferenceError: jQuery is not defined
+JavaScript error: https://www.transparencia.gov.br/static/libs/jquery-validation/jquery.validate.options.js?v=3.6.0, line 1: ReferenceError: jQuery is not defined
+JavaScript error: https://www.transparencia.gov.br/static/libs/jquery-validation/additional-methods.min.js?v=3.6.0, line 4: ReferenceError: jQuery is not defined
+JavaScript error: https://www.transparencia.gov.br/despesas/orgao?ordenarPor=orgaoSuperior&direcao=asc, line 771: ReferenceError: $ is not defined
+JavaScript error: https://www.transparencia.gov.br/static/scripts-full.min.js?v=3.6.0, line 28: ReferenceError: $ is not defined
+JavaScript error: https://www.transparencia.gov.br/despesas/orgao?ordenarPor=orgaoSuperior&direcao=asc, line 949: ReferenceError: $ is not defined
+JavaScript error: https://www.transparencia.gov.br/static/libs/dataTables/jquery.dataTables.js?v=3.6.0, line 13: ReferenceError: jQuery is not defined
+JavaScript error: https://www.transparencia.gov.br/static/libs/dataTables/dataTables.bootstrap.js?v=3.6.0, line 1: ReferenceError: jQuery is not defined
+JavaScript error: https://www.transparencia.gov.br/static/js/GridAgrupavel.js?v=3.6.0, line 34: ReferenceError: $ is not defined
+JavaScript error: https://www.transparencia.gov.br/static/libs/jquery/jquery.doubleScroll.js?v=3.6.0, line 3: ReferenceError: jQuery is not defined
+JavaScript error: https://www.transparencia.gov.br/static/libs/dataTables/select/dataTables.select.min.js?v=3.6.0, line 5: ReferenceError: jQuery is not defined
+JavaScript error: https://www.transparencia.gov.br/despesas/orgao?ordenarPor=orgaoSuperior&direcao=asc, line 982: ReferenceError: $ is not defined
+JavaScript error: https://www.transparencia.gov.br/despesas/orgao?ordenarPor=orgaoSuperior&direcao=asc, line 989: ReferenceError: $ is not defined
+JavaScript error: https://www.transparencia.gov.br/static/libs/bootstrap-multiselect/js/bootstrap-multiselect.min.js?v=3.6.0, line 1: TypeError: t is undefined
+JavaScript error: https://www.transparencia.gov.br/static/libs/tokeninput/jquery.tokeninput.js?v=3.6.0, line 28: ReferenceError: jQuery is not defined
+JavaScript error: https://www.transparencia.gov.br/static/js/validadores.js?v=3.6.0, line 2: ReferenceError: jQuery is not defined
+JavaScript error: https://www.transparencia.gov.br/despesas/orgao?ordenarPor=orgaoSuperior&direcao=asc, line 1025: ReferenceError: $ is not defined
+1647285990293	geckodriver	INFO	Listening on 127.0.0.1:50310
+1647285993771	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "50311" "-no-remote" "-profile" "C:\\Users\\Isaac\\AppData\\Local\\Temp\\rust_mozprofileeBNWKG"
+*** You are running in headless mode.
+1647285995209	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Isaac\\AppData\\Local\\Temp\\rust_mozprofileeBNWKG\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50311/devtools/browser/d64fb275-62ce-42f3-9937-914d717dddd4
+1647286000618	Marionette	INFO	Listening on port 50316
+1647286001080	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1647286536768	geckodriver	INFO	Listening on 127.0.0.1:63591
+1647286539854	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "63592" "-no-remote" "-profile" "C:\\Users\\Isaac\\AppData\\Local\\Temp\\rust_mozprofile4zdyfq"
+*** You are running in headless mode.
+1647286540661	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Isaac\\AppData\\Local\\Temp\\rust_mozprofile4zdyfq\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63592/devtools/browser/25d82e43-d52c-4817-a9f4-03c653f62f7f
+1647286542039	Marionette	INFO	Listening on port 63597
+1647286542542	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1647287130531	geckodriver	INFO	Listening on 127.0.0.1:55736
+1647287133596	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "55737" "-no-remote" "-profile" "C:\\Users\\Isaac\\AppData\\Local\\Temp\\rust_mozprofiler71dxp"
+*** You are running in headless mode.
+1647287133953	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Isaac\\AppData\\Local\\Temp\\rust_mozprofiler71dxp\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55737/devtools/browser/c8d797a5-f688-4977-b4ac-ce9a671cc18c
+1647287135374	Marionette	INFO	Listening on port 55742
+1647287135652	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1647287230624	geckodriver	INFO	Listening on 127.0.0.1:55821
+1647287233686	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "55822" "-no-remote" "-profile" "C:\\Users\\Isaac\\AppData\\Local\\Temp\\rust_mozprofilecm4sn4"
+*** You are running in headless mode.
+1647287234111	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Isaac\\AppData\\Local\\Temp\\rust_mozprofilecm4sn4\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55822/devtools/browser/9dee35a8-7438-42d5-b4ab-ced198fb35e5
+1647287235530	Marionette	INFO	Listening on port 55832
+1647287235734	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1647287381326	geckodriver	INFO	Listening on 127.0.0.1:55911
+1647287384384	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "55912" "-no-remote" "-profile" "C:\\Users\\Isaac\\AppData\\Local\\Temp\\rust_mozprofileq6QcYA"
+*** You are running in headless mode.
+1647287384890	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Isaac\\AppData\\Local\\Temp\\rust_mozprofileq6QcYA\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55912/devtools/browser/41f5ab13-c816-40c2-846b-62cb6c9e17ae
+1647287386275	Marionette	INFO	Listening on port 55918
+1647287386438	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+Exiting due to channel error.
+1647315888130	geckodriver	INFO	Listening on 127.0.0.1:59420
+1647316040590	geckodriver	INFO	Listening on 127.0.0.1:53184
+1647316057541	geckodriver	INFO	Listening on 127.0.0.1:53191
+1647316141733	geckodriver	INFO	Listening on 127.0.0.1:53255
+1647316144779	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "53256" "-no-remote" "-profile" "C:\\Users\\Isaac\\AppData\\Local\\Temp\\rust_mozprofileGxJnKJ"
+*** You are running in headless mode.
+1647316145076	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Isaac\\AppData\\Local\\Temp\\rust_mozprofileGxJnKJ\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53256/devtools/browser/4bed3948-c4d6-4bf3-a12d-4c81f675311e
+1647316146648	Marionette	INFO	Listening on port 53261
+1647316146833	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
