@@ -1,7 +1,6 @@
 {
     "require":{
         "slim/slim": "2.0",
-        "phpunit/phpunit": "^9",
         "vlucas/phpdotenv": "^5.0"
     }
 }
