@@ -26,7 +26,6 @@ Utilize o Postman (https://www.postman.com/) ou Insomnia(https://insomnia.rest/d
     ├── projeto-processo-seletivo-back
     |   ├── node_modules (não será importado, rodar npm install)
     |   ├── src
-    |   ├── Readme.md
     |       ├── index.js
     |       ├── rotas.js
     |       ├── conexao.js
@@ -36,6 +35,7 @@ Utilize o Postman (https://www.postman.com/) ou Insomnia(https://insomnia.rest/d
     |   ├── .env(não importado, personalizavél)
     |   ├── package-lock.json
     |   ├── package.json
+    |   ├── PROJETO.md
     |   ├── README.md
 
 ### Métodos API : Usar o Postman ou Insomnia para facilitar os testes
