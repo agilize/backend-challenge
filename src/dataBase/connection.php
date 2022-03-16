@@ -1,34 +1,19 @@
-<?php
+<?php 
 require_once("../../vendor/autoload.php");
-// Documentação e repositório da biblioteca phpdotenv: https://github.com/vlucas/phpdotenv
-class Connection
-{
-    private $host = "";
-    private $db_name = "raspagem_despesas";
-    private $username = "";
-    private $password = "";
-    public $conn;
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../../');
+$dotenv->load();
+$mysql_host = $_ENV['MYSQL_HOST'];
+$mysql_user = $_ENV['MYSQL_USER'];
+$mysql_pass = $_ENV['MYSQL_PASSWORD'];
+$mysql_db = "raspagem_despesas";
 
-    public function __construct()
-    {
-        $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../../');
-        $dotenv->load();
-        $this->host = $_ENV['MYSQL_HOST'] . ":" . $_ENV['MYSQL_PORT'];
-        $this->username = $_ENV['MYSQL_USER'];
-        $this->password = $_ENV['MYSQL_PASSWORD'];
+function getMysqlConnection(){
+    global $mysql_host, $mysql_user, $mysql_pass, $mysql_db;
+    
+    $conn = new mysqli($mysql_host, $mysql_user, $mysql_pass, $mysql_db);
+    
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
     }
-
-    public function getConnection()
-    {
-        $this->conn = null;
-
-        try {
-            $this->conn = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->db_name, $this->username, $this->password);
-            $this->conn->exec("set names utf8");
-        } catch (PDOException $exception) {
-            echo "Connection error: " . $exception->getMessage();
-        }
-
-        return $this->conn;
+    return $conn;
     }
-}

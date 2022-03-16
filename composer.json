@@ -1,6 +1,7 @@
 {
     "require":{
         "slim/slim": "2.0",
-        "vlucas/phpdotenv": "^5.0"
+        "vlucas/phpdotenv": "^5.0",
+        "chrome-php/chrome": "^1.0"
     }
 }
