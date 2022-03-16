@@ -1,14 +1,19 @@
 const knex = require('../conexao');
-const axios = require("axios");
-const cheerio = require("cheerio");
+const puppeteer = require('puppeteer');
+const cheerio = require('cheerio');
 
-const url = "https://www.transparencia.gov.br/despesas/orgao?ordenarPor=orgaoSuperior&direcao=asc";
 
-async function getDados() {
-    const { data } = await axios.get(url);
-    const $ = cheerio.load(data);
-    const list = [];
-}
+
+; (async () => {
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
+    await page.goto("https://www.transparencia.gov.br/despesas/orgao?ordenarPor=orgaoSuperior&direcao=asc");
+    let html = await page.content(html);
+    const $ = await cheerio.load(html);
+    const table = $('#lista').text();
+    console.log(table);
+    await browser.close();
+})();
 
 
 const listarDados = async (req, res) => {
