@@ -1,0 +1,70 @@
+# BACKEND-CHALLENGE
+
+# Sumário
+
+- [Sobre o desafio](#sobre)
+- [Requisitos técnicos](#requisitos)
+- [Tecnologias utilizadas](#requisitos)
+- [Comandos para instalar na sua maquina](#instalação)
+- [Execução do projeto](#execução)
+
+# Sobre
+
+  web scraping é uma técnica de extração de dados de uma página web.
+
+# Requisitos
+
+- Fazer um web scraping da tabela de dados do Portal da Transparência do Governo Federal
+- armazenar num banco de dados relacional
+- fornecer um endpoint (/api/dados) que retorne um json com os dados coletados
+
+# Técnologias 
+
+  - [Python3](https://www.python.org/)
+  - [Flask](http://flask.pocoo.org/)
+  - [sqlite3](https://docs.python.org/3/library/sqlite3.html)
+  - [selenium](https://selenium-python.readthedocs.io/getting-started.html)
+  - [chrome-driver](https://sites.google.com/a/chromium.org/chromedriver/downloads)
+  - [sql-alchemy](https://www.sqlalchemy.org/)
+
+# Instalação
+
+1. Clone o repositório
+
+2. Crie o ambiente virtual para o projeto:
+
+- `python3 -m venv .venv && source .venv/bin/activate`
+
+3. Instale as dependências:
+
+- `python3 -m pip install -r dev-requirements.txt`
+
+
+# Execução
+
+Execute os scripts no terminal para criar o banco de dados e a API:
+
+Passo 1: Criar o banco de dados
+
+  - `python3 core.py`
+
+
+  O banco de dados será criado em `agilize.db` conforme imagem abaixo:
+
+  ![banco de dados](./images/tabela.png)
+
+Passo 2: Inserir dados na tabela do banco de dados
+
+  - `python3 core_insert.py` 
+  
+  Os dados serão inseridos em `agilize.db` conforme imagem abaixo:
+
+  ![inserção de dados](./images/tabela_com_dados.png)
+
+Passo 3: Criar a API
+
+  - `python3 routes.py`
+
+  A API será criada na url `http://127.0.0.1:5000/api/dados` conforme imagem abaixo:
+
+  ![API](./images/tela_api.png)
