@@ -1,7 +1,7 @@
 <?php
-include("./connection.php");
-include("../scraping/filterValues.php");
-include("../scraping/scrapValues.php");
+require_once("./connection.php");
+require_once("../scraping/filterValues.php");
+require_once("../scraping/scrapValues.php");
 $items = getScrapValues();
 $conn = getMysqlConnection();
 $formattedValues = separatedValuesInVariables($items);
