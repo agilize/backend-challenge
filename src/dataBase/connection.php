@@ -5,7 +5,7 @@ $dotenv->load();
 $mysql_host = $_ENV['MYSQL_HOST'];
 $mysql_user = $_ENV['MYSQL_USER'];
 $mysql_pass = $_ENV['MYSQL_PASSWORD'];
-$mysql_db = "raspagem_despesas";
+$mysql_db = "raspagem_dados";
 
 function getMysqlConnection(){
     global $mysql_host, $mysql_user, $mysql_pass, $mysql_db;

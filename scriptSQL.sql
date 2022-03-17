@@ -3,7 +3,7 @@ USE raspagem_despesas;
 CREATE TABLE IF NOT EXISTS info(
 id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
 mes_ano VARCHAR(7),
-orgao_superior VARCHAR(60),
+orgao_superior VARCHAR(100),
 entidade_vinculada VARCHAR(100),
 valor_empenhado FLOAT,
 valor_liquidado FLOAT,
