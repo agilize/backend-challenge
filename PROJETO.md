@@ -1,44 +1,44 @@
 
 # Web Scraping
 
-Projeto feito para o processo seletivo da empresa Agilize "https://agilize.com.br/".
-projeto feito em PHP ,Mysql e um pouco de javaScript.
+Projeto feito para o processo seletivo da empresa Agilize "https://agilize.com.br/".  
+projeto feito em PHP ,Mysql, e um pouco de javaScript.
+  
+  
 
-
-
-
+  
 ## REQUISITOS PARA RODAR O PROJETO LOCALMENTE
-
+  
 **Chrome** (necessário para o a biblioteca chrome-php)
 ```
 https://www.google.com/intl/pt-BR/chrome/
 ```
-
+  
 **PHP v8.0.0^**
 ```
 https://www.php.net/downloads
 ```
-
+  
 **Composer v2.0.0^**
 ```
 https://getcomposer.org/download/
 ```
-
+  
 **Mysql**
 ```
 https://www.mysql.com/downloads/
 ```
-
+  
 **XAMPP** (windows)
 ```
 https://www.apachefriends.org/pt_br/index.html
 ```
-
+  
 **Apache** (linux)
 ```
 https://www.layerstack.com/resources/tutorials/Installing-Apache-server-on-Linux-Cloud-Servers
 ```
-
+  
 Dependendo da distribuição linux e da intalação do php sera necessario a instalação de alguns pacotes do PHP
 ```
 sudo apt-get install php-xml
@@ -52,9 +52,9 @@ sudo apt-get install -y php-mysqli
 
 ## Como iniciar o projeto
 
-Primeiramente va até onde esta armazenado o seu projeto, e modifique o arquivo **.env.example** 
-para os seus respectivos dados do Mysql. Assim que terminar renomeie o arquivo para **.env**.
-Este arquivo é onde fica os dados sensiveis, que não devem ser compartilhados.
+Primeiramente va até onde esta armazenado o seu projeto, e modifique o arquivo **.env.example**   
+para os seus respectivos dados do Mysql. Assim que terminar renomeie o arquivo para **.env**.  
+Este arquivo é onde fica os dados sensiveis, que não devem ser compartilhados.  
 
 
 ### Windows
