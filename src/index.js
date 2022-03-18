@@ -25,10 +25,13 @@ const url = "https://www.transparencia.gov.br/despesas/orgao?ordenarPor=orgaoSup
 
 
 (async () => {
-  const browser = await puppeteer.launch({ headless: false });
+  const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
   await page.goto(url);
+
+
+
 
   const result = await page.$$eval('table tr', rows => {
     return Array.from(rows, row => {
@@ -67,6 +70,7 @@ const url = "https://www.transparencia.gov.br/despesas/orgao?ordenarPor=orgaoSup
 
 
   try {
+    
     await knex.insert(result).into('despesas').then(data => {
       console.log(data);
     })
@@ -75,7 +79,8 @@ const url = "https://www.transparencia.gov.br/despesas/orgao?ordenarPor=orgaoSup
     console.log("erro")
   }
 
-
+  
+  await page.click('#lista_next');
   await page.waitForTimeout(3000);
 
   await browser.close();
