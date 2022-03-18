@@ -10,20 +10,40 @@ $conn = getMysqlConnection();
 $app->get('/', function () {
     echo 'home';
 });
+
 $app->get('/api/dados', function () {
     global $conn;
-    $values = getMysqlValues($conn);
-    echo $values;
+    try {
+        $values = getMysqlValues($conn);
+        echo $values;
+    } catch (Exception $e) {
+        echo 'error';
+    }
 });
+
 $app->get('/DB/create', function () {
     global $conn;
-    createDB($conn);
-    echo "DB created";
+    try {
+        createDB($conn);
+        echo 'banco de dados criado';
+    } catch (Exception $e) {
+        echo 'erro a criar a base de dados';
+    }
 });
+
 $app->get('/DB/populate', function () {
     global $conn;
-    insertInDb($conn);
-    echo "DB populated";
+    try {
+        $values = getMysqlValues($conn);
+        if ($values == '[]') {
+            insertInDb($conn);
+            echo 'populado com sucesso';
+        } else {
+            echo 'banco de dados ja populado';
+        }
+    } catch (Exception) {
+        echo "erro a popular a base de dados";
+    }
 });
 
 $app->run();

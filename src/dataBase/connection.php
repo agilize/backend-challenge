@@ -1,7 +1,7 @@
-<?php 
-if($page == 'route'){
+<?php
+if ($page == 'route') {
     $pageLoad = "./vendor/autoload.php";
-}else{
+} else {
     $pageLoad = "../../vendor/autoload.php";
 }
 
@@ -16,15 +16,16 @@ $mysql_pass = $_ENV['MYSQL_PASSWORD'];
 $mysql_db = "raspagem_despesas";
 
 //se conecta com o banco de dados
-function getMysqlConnection(){
+function getMysqlConnection()
+{
     global $mysql_host, $mysql_user, $mysql_pass, $mysql_db;
     
-    $conn = new mysqli($mysql_host, $mysql_user, $mysql_pass, $mysql_db,);
-    mysqli_query($conn,"SET CHARACTER SET 'utf8'");
-    mysqli_query($conn,"SET SESSION collation_connection ='utf8_unicode_ci'");
+    $conn = new mysqli($mysql_host, $mysql_user, $mysql_pass, $mysql_db, );
+    mysqli_query($conn, "SET CHARACTER SET 'utf8'");
+    mysqli_query($conn, "SET SESSION collation_connection ='utf8_unicode_ci'");
     
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
     return $conn;
-    }
+}

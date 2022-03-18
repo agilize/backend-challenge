@@ -8,6 +8,7 @@ $paidValue = [];
 $unpaidValue = [];
 
 function removeUselessValues($items)
+// remove os "detalhar" dos dados
 {
     array_splice($items, 0, 8);
     for ($i = 0; $i < count($items); $i++) {
@@ -31,6 +32,7 @@ function formatValues($data)
 
 function separatedValuesInVariables($items)
 {
+    // separa os valores em variaveis
     global $date, $agency, $entities, $committedValue, $liquidatedValue, $paidValue, $unpaidValue;
     $value = formatValues($items);
     

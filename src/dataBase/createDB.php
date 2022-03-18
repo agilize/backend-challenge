@@ -1,7 +1,8 @@
 <?php
-function createDb($conn){
-    //Dropa a tabela atual e cria uma nova 
-    $sql = 
+function createDb($conn)
+{
+    //Dropa a tabela atual e cria uma nova
+    $sql =
     "DROP DATABASE IF EXISTS raspagem_despesas;
     CREATE DATABASE raspagem_despesas;
     ALTER DATABASE raspagem_despesas CHARACTER SET utf8 COLLATE utf8_general_ci;
@@ -17,5 +18,4 @@ function createDb($conn){
     valor_restos_a_pagar_pagos FLOAT
     );";
     $conn->multi_query($sql);
-    
 }

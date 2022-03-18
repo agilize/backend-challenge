@@ -3,12 +3,18 @@
 // O uso do HeadLess foi uma dica do Israel Brito, agradeco muito
 use HeadlessChromium\BrowserFactory;
 
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../../');
+
 require_once './vendor/autoload.php';
 
 
-function getScrapValues(){
+function getScrapValues()
+{
+    global $dotenv;
+    $dotenv->load();
+    $chrome = $_ENV['CHROME_PATH'];
     $url = 'https://www.transparencia.gov.br/despesas/orgao?ordenarPor=orgaoSuperior&direcao=asc';
-    $browserFactory = new BrowserFactory('google-chrome');
+    $browserFactory = new BrowserFactory($chrome);
     $browser = $browserFactory->createBrowser();
     
     try {
@@ -18,12 +24,13 @@ function getScrapValues(){
         sleep(1);
 
         
-                        //abaixo um codigo em js que pega as tabelas e desestrutura elas
-                        //até retornar um array apenas os textos contidos.
+        //abaixo um codigo em js que pega as tabelas e desestrutura elas
+        //até retornar um array apenas os textos contidos.
         $value = $page
               ->evaluate(
-                "textValues = []; for (let i = 0; i < 46; i++){let even =
-                document.querySelectorAll('.even');
+                  "textValues = []; 
+                for (let i = 0; i < 46; i++){
+                let even = document.querySelectorAll('.even');
                 let odd = document.querySelectorAll('.odd');
                 let firstValues = [];
                 odd.forEach((i) => firstValues.push(i))
@@ -39,9 +46,10 @@ function getScrapValues(){
                 }      
                 let but = document.querySelectorAll('.paginate_button')[1];
                 but.click();} 
-                textValues;")
+                textValues;"
+              )
                        ->getReturnValue();
-            return $value;
+        return $value;
     } finally {
         // bye
         $browser->close();
