@@ -7,14 +7,15 @@ if($page == 'route'){
 
 
 
-
+// pega os valores do arquivo .env
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../../');
 $dotenv->load();
 $mysql_host = $_ENV['MYSQL_HOST'];
 $mysql_user = $_ENV['MYSQL_USER'];
 $mysql_pass = $_ENV['MYSQL_PASSWORD'];
-$mysql_db = "raspagem_dados";
+$mysql_db = "raspagem_despesas";
 
+//se conecta com o banco de dados
 function getMysqlConnection(){
     global $mysql_host, $mysql_user, $mysql_pass, $mysql_db;
     

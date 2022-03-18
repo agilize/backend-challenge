@@ -1,4 +1,5 @@
-CREATE DATABASE IF NOT EXISTS raspagem_despesas;
+DROP DATABASE IF EXISTS raspagem_despesas;
+CREATE DATABASE raspagem_despesas;
 USE raspagem_despesas;
 CREATE TABLE IF NOT EXISTS info(
 id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
