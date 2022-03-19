@@ -1,11 +1,16 @@
 import time
 import pandas as pd
+import os
+import dotenv
 # import sys
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from backend.save_data import save_data_frame
 from storage.connection import db_connection
 from storage.migrate import access_database
+
+dotenv.load_dotenv()
+DB_NAME = os.getenv("DB_NAME")
 
 # export PYTHONPATH="${PYTHONPATH}:/home/breno/trybe/desafio_tecnico/Agilize/\
 # backend-challenge"
@@ -15,7 +20,6 @@ cursor = connection.cursor()
 
 URL_BASE = "https://www.transparencia.gov.br/despesas/orgao?ordenarPor\
     =orgaoSuperior&direcao=asc"
-DB_NAME = "agilize"
 
 
 def scraper(url):
