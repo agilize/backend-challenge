@@ -12,10 +12,10 @@ create_expense_table_query = F"""
         mes_ano VARCHAR(100),
         programa_orcamentario VARCHAR(100),
         acao_orcamentaria VARCHAR(100),
-        valor_empenhado VARCHAR(100),
-        valor_liquidado VARCHAR(100),
-        valor_pago VARCHAR(100),
-        valor_restos_a_pagar_pagos VARCHAR(100)
+        valor_empenhado DECIMAL(15,2),
+        valor_liquidado DECIMAL(15,2),
+        valor_pago DECIMAL(15,2),
+        valor_restos_a_pagar_pagos DECIMAL(15,2)
     )
 """
 
