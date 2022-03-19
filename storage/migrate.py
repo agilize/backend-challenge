@@ -10,6 +10,8 @@ create_expense_table_query = F"""
         CREATE TABLE {TABLE_NAME}(
         id INT AUTO_INCREMENT PRIMARY KEY,
         mes_ano VARCHAR(100),
+        programa_orcamentario VARCHAR(100),
+        acao_orcamentaria VARCHAR(100),
         valor_empenhado VARCHAR(100),
         valor_liquidado VARCHAR(100),
         valor_pago VARCHAR(100),

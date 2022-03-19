@@ -5,6 +5,7 @@ import dotenv
 # import sys
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
 from backend.save_data import save_data_frame
 from storage.connection import db_connection
 from storage.migrate import access_database
@@ -28,6 +29,9 @@ def scraper(url):
 
     navegador = webdriver.Chrome(options=options)
     navegador.get(url)
+    time.sleep(2)
+    element = navegador.find_elements(By.TAG_NAME, 'tr > td > span > a')[0]
+    element.click()
     time.sleep(1)
 
     page_content = navegador.page_source

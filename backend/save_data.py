@@ -12,6 +12,8 @@ def save_data_frame(data_frame, connection):
             INSERT INTO {TABLE_NAME}
             (
                 mes_ano,
+                programa_orcamentario,
+                acao_orcamentaria,
                 valor_empenhado,
                 valor_liquidado,
                 valor_pago,
@@ -19,10 +21,12 @@ def save_data_frame(data_frame, connection):
             )
             VALUES (
                 '{row[1]}',
-                '{row[4]}',
-                '{row[5]}',
-                '{row[6]}',
-                '{row[7]}'
+                '{row[7]}',
+                '{row[8]}',
+                '{row[15]}',
+                '{row[16]}',
+                '{row[17]}',
+                '{row[18]}'
             )
         """
         cursor.execute(sql_query)
