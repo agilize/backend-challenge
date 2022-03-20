@@ -22,7 +22,7 @@ const scrapping = async () => {
   return infosFromTable;
 };
 
-const createInfosGov = async () => {
+const breakArray = async () => {
   const resultOfScrapping = await scrapping();
 
   if (resultOfScrapping === undefined || resultOfScrapping.length === 0) {
@@ -44,7 +44,13 @@ const createInfosGov = async () => {
 
       return resultArray;
     }, []);
-  
+
+  return arraysOfInfos;
+}
+
+const createInfosGov = async () => {
+  const arraysOfInfos = await breakArray().catch(() => { throw errorHandling(badRequest, 'Scrapping failed. Please try again.') } );
+
   arraysOfInfos.map(async (array) => {
     const [mesAno, programaOrcamentario, acaoOrcamentaria, valorEmpenhado, valorLiquidado, valorPago, valorRestosAPagarPagos] = array;
     await InfosGov.create({
@@ -66,5 +72,6 @@ const getInfosGov = async () => {
 };
 
 module.exports = {
+  createInfosGov,
   getInfosGov,
 };
