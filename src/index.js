@@ -21,8 +21,8 @@ const url = "https://www.transparencia.gov.br/despesas/orgao?ordenarPor=orgaoSup
 
   const result = await page.$$eval('table tr', rows => {
     return Array.from(rows, row => {
-      if (row ==! ['']){
-        
+      if (row == !['']) {
+
       }
 
       const mes = row.querySelectorAll('td:nth-child(2)');
@@ -59,32 +59,30 @@ const url = "https://www.transparencia.gov.br/despesas/orgao?ordenarPor=orgaoSup
 
 
   try {
-    
+
     await knex.insert(result).into('despesas').then(data => {
       console.log(data);
     })
   }
   catch (error) {
-    console.log("erro")
+    console.log("Erro ao salvar os dados")
   }
 
-  
-  await page.click('#lista_next');
   await page.waitForTimeout(3000);
 
   await browser.close();
 })();
 
 const mostrardados = async (req, res) => {
-  try{
-      const showDados = await knex.select().from("despesas");
+  try {
+    const showDados = await knex.select().from("despesas");
     return res.status(200).json(showDados);
-    
 
-    } catch (error) {
-        return res.status(404).json({mensagem: error.message})
-    }
+
+  } catch (error) {
+    return res.status(404).json({ mensagem: error.message })
   }
+}
 
 
 rotas.get('/api/dados', mostrardados);
