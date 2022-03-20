@@ -1,4 +1,4 @@
-DB_USER=<insert your relational user name>
-PASSWORD=<insert your relational user password>
+DB_USER = "user"
+PASSWORD = "password"
 DB_NAME = "agilize"
 TABLE_NAME = "expense"
