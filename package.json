@@ -1,0 +1,30 @@
+{
+  "name": "backend-challenge",
+  "version": "1.0.0",
+  "description": "O web scraping (raspagem de rede, em tradução livre), também conhecido como extração de dados da web,\r é o nome dado ao processo de coleta de dados estruturados da web de maneira automatizada. Em geral,\r esse método é usado por pessoas, empresas que desejam usar a vasta quantidade de dados da web disponíveis\r publicamente para tomar decisões mais inteligentes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./src/index.js",
+    "start": "nodemon ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EricksonOP/backend-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EricksonOP/backend-challenge/issues"
+  },
+  "homepage": "https://github.com/EricksonOP/backend-challenge#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "knex": "^1.0.3",
+    "nodemon": "^2.0.15",
+    "pg": "^8.7.3",
+    "puppeteer": "^13.5.1"
+  }
+}
