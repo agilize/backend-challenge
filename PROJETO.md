@@ -33,10 +33,15 @@ Este projeto tem como objetivo realizar um *web scraping* da **tabela de dados**
 </div>
 
 
+## Preparação do amabiente
+
+* O servidor **MySQL** deve estar devidamente instalado e configurado, assim como o **usuário de acesso** e sua **senha** devem ser informados no arquivo .env (.env EXAMPLE) na raiz do projeto.  
+
+* É necessário a instalação do Webbrowser Selenium adequado para automatização do uso do navegador. Os detalhes e os browsers compatíveis estão disponíveis no link abaixo:
+
+- `https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/`
+
 ## Pré-requisitos
-
-O servidor **MySQL** deve estar devidamente instalado e configurado, assim como o **usuário de acesso** e sua **senha** devem ser informados no arquivo .env (.env EXAMPLE) na raiz do projeto.
-
 
 1. Clone o repositório
 
