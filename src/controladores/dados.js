@@ -24,6 +24,7 @@ const registroDados = async (req, res) => {
         })
         await browser.close();
     })();
+    fs.readFileSync('./listaDeDados.json')
     try {
         await knex('dados_portal_transparencia').insert({
             mes_ano,
