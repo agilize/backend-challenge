@@ -4,8 +4,8 @@
   "description": "O web scraping (raspagem de rede, em tradução livre), também conhecido como extração de dados da web,\r é o nome dado ao processo de coleta de dados estruturados da web de maneira automatizada. Em geral,\r esse método é usado por pessoas, empresas que desejam usar a vasta quantidade de dados da web disponíveis\r publicamente para tomar decisões mais inteligentes.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
