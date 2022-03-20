@@ -3,26 +3,12 @@ const puppeteer = require("puppeteer");
 const knex = require("./bancodedados/conexao");
 
 
-
 const app = express();
 const rotas = express();
 app.use(express.json());
 app.use(rotas);
 
-// const port = 3000
-
-// app.get('/', (req, res) => {
-//   res.send('Hello World!')
-// })
-
-// app.listen(port, () => {
-//   console.log(`Example app listening on port ${port}`)
-// })
-
-
-
 const url = "https://www.transparencia.gov.br/despesas/orgao?ordenarPor=orgaoSuperior&direcao=asc";
-
 
 (async () => {
   const browser = await puppeteer.launch();
@@ -35,6 +21,9 @@ const url = "https://www.transparencia.gov.br/despesas/orgao?ordenarPor=orgaoSup
 
   const result = await page.$$eval('table tr', rows => {
     return Array.from(rows, row => {
+      if (row ==! ['']){
+        
+      }
 
       const mes = row.querySelectorAll('td:nth-child(2)');
       const programaOr = row.querySelectorAll('td:nth-child(3)');
