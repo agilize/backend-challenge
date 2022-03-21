@@ -1,0 +1,4 @@
+DB_USER = "user"
+PASSWORD = "password"
+DB_NAME = "agilize"
+TABLE_NAME = "expense"
