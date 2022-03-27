@@ -11,8 +11,8 @@ const puppeteer = require('puppeteer');
 
     const data = await page.evaluate(() => {
         let lista = []
-        var tr_list = document.querySelectorAll('tbody tr'); // returns NodeList
-        var tr_array = [...tr_list]; // converts NodeList to Array
+        var tr_list = document.querySelectorAll('tbody tr');
+        var tr_array = [...tr_list];
         tr_array.forEach(tr => {
             const row = {
                 mes_ano: tr.querySelector('td:nth-child(2) span').innerText,
@@ -22,7 +22,6 @@ const puppeteer = require('puppeteer');
                 valor_liquidado: tr.querySelector('td:nth-child(6) span').innerText,
                 valor_pago: tr.querySelector('td:nth-child(7) span').innerText,
                 valor_restos_a_pagar_pagos: tr.querySelector('td:nth-child(8) span').innerText,
-
             }
             lista.push(row);
         });

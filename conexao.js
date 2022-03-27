@@ -1,4 +1,3 @@
-const { text } = require('cheerio/lib/static');
 const { } = require('pg');
 const { Pool } = require('pg/lib');
 const { param } = require('./rotas');
